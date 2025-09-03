@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galería de Imágenes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #E0BBE4; /* Color lila para el fondo */
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        /* Estilos del menú */
+        nav {
+            background-color: #2c3e50;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        /* Menú desplegable */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 18px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 16px 20px;
+            background-color: #2c3e50;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #1abc9c;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #34495e;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #1abc9c;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Contenedor para las imágenes */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;  /* Espacio entre las imágenes */
+            flex-wrap: wrap;  /* Para que las imágenes se ajusten si hay demasiado contenido */
+            margin-top: 30px;
+        }
+        .image-container img {
+            width: 300px;  /* Tamaño más grande para las imágenes */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .recipe {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        .recipe h2, .recipe h3 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <div class="dropdown">
+            <button class="dropbtn">Páginas</button>
+            <div class="dropdown-content">
+                <a href="receta 1.html">Página 1</a>
+                <a href="receta 2.html">Página 2</a>
+                <a href="receta 3.html">Página 3</a>
+                <a href="receta 4.html">Página 4</a>
+                <a href="formulario.html">Formulario</a> <!-- 🔹 formulario.html -->
+            </div>
+        </div>
+    </nav>
+
+    <h1>Bienvenido a mi galería de imágenes</h1>
+    <p>Aquí puedes ver varias imágenes con texto adicional debajo de cada una.</p>
+
+    <!-- Contenedor de imágenes -->
+    <div class="image-container">
+        <div>
+            <img src="tarta.jpg" alt="Tarta deliciosa" />
+            <p>Esta es una deliciosa tarta de frutas.</p>
+
+            <!-- Receta de la tarta debajo de la imagen -->
+            <div class="recipe">
+                <h2>Receta de la Tarta de Frutas</h2>
+                <h3>Ingredientes:</h3>
+                <ul>
+                    <li>1 base de tarta</li>
+                    <li>200g de crema pastelera</li>
+                    <li>Frutas frescas (fresas, uvas, kiwi, etc.)</li>
+                    <li>Gelatina neutra (opcional)</li>
+                    <li>Azúcar al gusto</li>
+                </ul>
+                <h3>Instrucciones:</h3>
+                <ol>
+                    <li>Precalienta el horno a 180°C.</li>
+                    <li>Rellena la base de tarta con crema pastelera.</li>
+                    <li>Decora con las frutas frescas.</li>
+                    <li>Si deseas, cubre con una capa de gelatina para darle brillo.</li>
+                    <li>Deja enfriar en la nevera durante 1-2 horas.</li>
+                    <li>¡Listo para disfrutar!</li>
+                </ol>
+            </div>
+        </div>
+        <div>
+            <img src="pasta.jpg" alt="Plato de pasta" />
+            <p>Un delicioso plato de pasta.</p>
+        </div>
+        <div>
+            <img src="ensalada.jpg" alt="Ensalada fresca" />
+            <p>Una fresca ensalada con aderezo especial.</p>
+        </div>
+    </div>
+
+</body>
+</html>
